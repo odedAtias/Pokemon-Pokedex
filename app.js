@@ -27,13 +27,15 @@ const [container, button, colors] = [
 let [pokeIndex, numOfPokemons] = [1, 0];
 
 // Functions block
+
+// A function that executes a fetch from pokeApi to the number of Pokemon entered in the argument
 const fetchPokemones = async requiredNumOfPokemons => {
 	for (let i = 1; i <= requiredNumOfPokemons; i++)
 		await getPokemon(numOfPokemons + i);
 	numOfPokemons += requiredNumOfPokemons;
 };
 
-//Get Pokemon
+//Get Pokemon - Recieves the Pokemon ID by pokeApi DB and sends a get request for the Pokemon with the entered id
 const getPokemon = async id => {
 	const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 	const response = await fetch(url);
@@ -41,6 +43,7 @@ const getPokemon = async id => {
 	createPokemonCard(data);
 };
 
+// createPokemonCard - Receives a Pokemon object and displays it with its details on the screen
 const createPokemonCard = pokemon => {
 	const [pokemonName, pokeElement, pokemonId, pokemonType] = [
 		pokemon.name.toUpperCase(),
@@ -64,6 +67,7 @@ const createPokemonCard = pokemon => {
 	container.appendChild(pokeElement);
 };
 
+// 
 const getPokemonId = pokemon => {
 	if (String(pokemon.id).length == '1') return '00' + pokemon.id;
 	else if (String(pokemon.id).length == '2') return '0' + pokemon.id;

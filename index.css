@@ -27,6 +27,10 @@ body {
     margin: auto;
 }
 
+.indexLogo p {
+    margin-top: 0;
+}
+
 /* The container the containe button and gengar */
 .indexButton {
     display: grid;
@@ -74,6 +78,11 @@ body {
     width: 65%;
     height: auto;
     margin: auto;
+}
+
+.indexQoute h1 {
+    margin-bottom: 0;
+    line-height: 50px;
 }
 
 /* ============================================================================= Pokedex.html style =================================================================================== */
