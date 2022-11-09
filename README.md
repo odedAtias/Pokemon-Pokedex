@@ -1,6 +1,8 @@
 # 🕹️ Pokedex 
 In the TV show Pokemon, the Pokedex keeps track of the Pokémon you’ve seen and caught, but here is an app which the user can view a list of Pokemons, search and view the details of a specific Pokemon.
 
+![POKEDEX](POKEDEX.png)
+
 The main goal of this project is to know how to fetch from an external api.
 
 Each pokemon in the pokedex contain :
@@ -10,8 +12,6 @@ Each pokemon in the pokedex contain :
 🔹 Her id number
 
 🔹 Her type
-
-![POKEDEX](POKEDEX.png)
 
 ## 👨‍💻 Technologies
 
